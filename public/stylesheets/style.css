@@ -1,0 +1,62 @@
+
+body{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+table{
+	margin: auto;
+	font-family: 'Schoolbell', cursive;
+	
+}
+
+td {
+	font-family: 'Schoolbell', cursive;
+	height: 200px;
+	width: 200px;
+	font-size: 125px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#b1, #b2, #b4, #b5, #b7, #b8 {
+	border-right: 3px dashed grey;
+}
+#b1, #b2, #b3, #b4, #b5, #b6{
+	border-bottom: 3px dashed grey;
+}
+
+h1{
+	font-family: 'Amatic SC', cursive;
+	margin: 40px auto 0 auto;
+	font-size: 100px;
+}
+
+#reset {
+	-webkit-appearance: none;
+	display: inline;
+	width: 150px;
+	height: 50px;
+	margin: 30px auto;
+	border-radius: 15px;
+	font-size: 25px;
+	font-family: 'Schoolbell', cursive;
+
+}
+p {
+	font-family: 'Schoolbell', cursive;
+	text-align: center;
+	font-size: 25px;
+	margin: 5px auto
+}
+
+h2 {
+	font-family: 'Schoolbell', cursive;
+	color: red;
+	text-align: center;
+	font-size: 30px;
+	margin: 10px auto;
+	
+}
