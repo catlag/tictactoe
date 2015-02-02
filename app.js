@@ -12,6 +12,6 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
-var server = app.listen(3000, function() {
-    console.log('Listening on port %d', server.address().port);
+app.listen(process.env.PORT || 3000, function(){
+  "Server is listening on port 3000. Yay!";
 });
