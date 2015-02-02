@@ -4,7 +4,7 @@ body{
 	display: -webkit-flex;
 	flex-direction: column;
 	align-content: center;
-	background: url("https://i.imgur.com/wmZAMC4.jpg?1");
+	background-image: url("../wmZAMC4.jpg");
 	color: rgba(255, 255, 255, 0.8);
 }
 
