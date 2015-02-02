@@ -9,9 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.11.0",
     "ejs": "^2.2.3",
     "express": "^4.11.1",
     "lodash": "^3.0.0",
+    "method-override": "^2.3.1",
     "pg": "^4.2.0",
     "sequelize": "^2.0.0-rc8",
     "sequelize-cli": "^1.0.7"
