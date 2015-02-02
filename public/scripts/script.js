@@ -4,7 +4,7 @@ var letter= "X";
 var win = false;
 
 var xCounter = 0;
-var yCounter = 0;
+var oCounter = 0;
 
 
 // Goes thru all the td's and adds an event listener
@@ -24,16 +24,20 @@ var selectItem = function(){
     if (win === false){
 	    if (this.innerText === ""){
 	      this.innerText = letter;
+	      checkWin();
+	      
 	      if(letter === "X"){
 	      	xCounter += 1;
 	      }
 	      if(letter === "O"){
-	      	yCounter += 1;
+	      	oCounter += 1;
 	      }
-	      checkWin();
+	      
+	      checkX();
+	      checkO();
 	      nextItem();
 	      console.log(xCounter);
-	      console.log(yCounter);
+	      console.log(oCounter);
 	    }
 	   } 
 };
@@ -44,23 +48,28 @@ function nextItem() {
     if (letter === "X") {
         letter = "O";
         playerTurn();
-        checkWin();
+        // checkWin();
+        // checkX();
     }else {
       letter = "X";
       playerTurn();
-      checkWin();
+      // checkWin();
+      // checkX();
     }
 }
 
 // Writes who's turn it is 
 var playerTurn = function(){
+		if (win === false){
     document.getElementById("p1").innerHTML = "It's " + letter + "s turn!";
-        
+    }    
 };
 
 // Resets the board
 var resetButtonHandler = function() { 
 		win = false;
+		xCounter = 0;
+		oCounter = 0;
     var gameBoxes = document.querySelectorAll("td");
         for (var i = 0; i < gameBoxes.length; i++) {
           if (gameBoxes[i].innerText !== "") {
@@ -93,7 +102,20 @@ window.onload = initaliaze;
   var val6 = document.getElementById("b7");
   var val7 = document.getElementById("b8");
   var val8 = document.getElementById("b9");
-  
+ 
+checkX = function(){
+ if(xCounter >= 3){
+ 	console.log("X was clicked " + xCounter + " times");
+ }
+};
+
+checkO = function(){
+	if(oCounter >= 3){
+		console.log("O was clicked " + oCounter + " times");
+	}
+};
+
+
 
   var checkWin = function(){
   if(val0.innerHTML === "X" && val1.innerHTML === "X" && val2.innerHTML === "X" || 
