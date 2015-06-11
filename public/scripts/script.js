@@ -16,6 +16,18 @@ var styleBoxElements = function(){
   }
 };
 
+var button = document.getElementById("reset");
+
+var showButton = function(){
+  console.log("button");
+  console.log(xCounter);
+  if (win || xCounter === 5 ){
+  button.style.display = "initial";
+}
+  else { 
+    button.style.display = "none";
+  }
+};
 
 // Check to see if td is empty and if is then writes the var letter ( which is x)
 // on the td. It then goes on to the next function. Pushed box id into player array.
@@ -24,13 +36,15 @@ var selectItem = function(){
     if (win === false){
 	    if (this.innerText === ""){
 	      this.innerText = letter;
-	      checkWin();
+	      
 	      
 	      if(letter === "X"){
 	      	xCounter += 1;
+          // checkWin();
 	      }
 	      if(letter === "O"){
 	      	oCounter += 1;
+          // checkWin();
 	      }
 	      
 	      checkX();
@@ -48,12 +62,12 @@ function nextItem() {
     if (letter === "X") {
         letter = "O";
         playerTurn();
-        // checkWin();
+        checkWin();
         // checkX();
     }else {
       letter = "X";
       playerTurn();
-      // checkWin();
+      checkWin();
       // checkX();
     }
 }
@@ -67,9 +81,10 @@ var playerTurn = function(){
 
 // Resets the board
 var resetButtonHandler = function() { 
+    xCounter = 0;
+    oCounter = 0;
 		win = false;
-		xCounter = 0;
-		oCounter = 0;
+    showButton();
     var gameBoxes = document.querySelectorAll("td");
         for (var i = 0; i < gameBoxes.length; i++) {
           if (gameBoxes[i].innerText !== "") {
@@ -118,6 +133,8 @@ checkO = function(){
 
 
   var checkWin = function(){
+    console.log("checking win");
+    showButton();
   if(val0.innerHTML === "X" && val1.innerHTML === "X" && val2.innerHTML === "X" || 
     val3.innerHTML === "X" && val4.innerHTML === "X" && val5.innerHTML === "X"  ||
     val6.innerHTML === "X" && val7.innerHTML === "X" && val8.innerHTML === "X"  ||
@@ -126,9 +143,11 @@ checkO = function(){
     val2.innerHTML === "X" && val5.innerHTML === "X" && val8.innerHTML === "X"  ||
     val0.innerHTML === "X" && val4.innerHTML === "X" && val8.innerHTML === "X"  ||
     val2.innerHTML === "X" && val4.innerHTML === "X" && val6.innerHTML === "X" ){
-      document.getElementById("p1").innerHTML = "X wins! Start a new game!";
-      console.log("X wins");
-      win = true;
+    document.getElementById("p1").innerHTML = "X wins! Start a new game!";
+    console.log("X wins");
+    win = true;
+    showButton();
+
   } else if (val0.innerHTML === "O" && val1.innerHTML === "O" && val2.innerHTML === "O" || 
     val3.innerHTML === "O" && val4.innerHTML === "O" && val5.innerHTML === "O"  ||
     val6.innerHTML === "O" && val7.innerHTML === "O" && val8.innerHTML === "O"  ||
@@ -139,7 +158,11 @@ checkO = function(){
     val2.innerHTML === "O" && val4.innerHTML === "O" && val6.innerHTML === "O" ) {
       document.getElementById("p1").innerHTML = "O wins! Start a new game!";
       win = true;
+      showButton();
       console.log("O wins");
+    } else if (xCounter === 5 && win === false){
+      document.getElementById("p1").innerHTML = "No Winner! Start a new game!";
+      console.log("no win");
     }
 };
  

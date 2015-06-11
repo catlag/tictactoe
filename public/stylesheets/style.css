@@ -1,81 +1,75 @@
+body {
+  -webkit-display: flex;
+  -ms-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  -moz-align-content: center;
+  -o-align-content: center;
+  align-content: center;
+  background-color: #FFBBB6;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Julius Sans One', sans-serif; }
 
-body{
-	display: flex;
-	display: -webkit-flex;
-	flex-direction: column;
-	align-content: center;
-	background-image: url("../wmZAMC4.jpg");
-	color: rgba(255, 255, 255, 0.8);
-}
-
-table{
-	margin: auto;
-	z-index: 200;
-	font-family: 'Schoolbell', cursive;
-	
-}
+table {
+  margin: auto;
+  z-index: 200; }
 
 td {
-	font-family: 'Schoolbell', cursive;
-	height: 200px;
-	width: 200px;
-	font-size: 125px;
-	text-align: center;
-	margin: 0 auto;
-}
+  height: 2.5em;
+  width: 2.5em;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0; }
 
 #b1, #b2, #b4, #b5, #b7, #b8 {
-	border-right: 3px dashed white;
-}
-#b1, #b2, #b3, #b4, #b5, #b6{
-	border-bottom: 3px dashed white;
-}
+  border-right: 3px dashed white; }
 
-h1{
-	font-family: 'Amatic SC', cursive;
-	margin: 40px auto 0 auto;
-	font-size: 100px;
-}
+#b1, #b2, #b3, #b4, #b5, #b6 {
+  border-bottom: 3px dashed white; }
+
+h1 {
+  margin: 2% 0 auto;
+  font-size: 3em;
+  text-align: center; }
 
 #reset {
-	-webkit-appearance: none;
-	background: none;
-	display: inline;
-	width: 150px;
-	height: 50px;
-	margin: 30px auto;
-	font-size: 25px;
-	border: 2px solid rgba(255, 255, 255, 0.8);
-	color: rgba(255, 255, 255, 0.7);
-	font-family: 'Schoolbell', cursive;
-	z-index: 200;
+  -webkit-appearance: none;
+  background: #ffbbb6;
+  display: none;
+  position: absolute;
+  width: 7em;
+  height: 2em;
+  padding: 0;
+  border-radius: 0;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  margin-top: -1em;
+  margin-left: -3.5em;
+  font-size: 2em;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Julius Sans One', sans-serif;
+  z-index: 500; }
 
-}
 p {
-	font-family: 'Schoolbell', cursive;
-	text-align: center;
-	font-size: 25px;
-	margin: 5px auto 20px auto;
-}
+  text-align: center;
+  font-size: 1.5em;
+  margin: 5px 20px auto; }
 
 h2 {
-	font-family: 'Schoolbell', cursive;
-	color: red;
-	text-align: center;
-	font-size: 30px;
-	margin: 10px auto;
-	
-}
+  color: red;
+  text-align: center;
+  font-size: 30px;
+  margin: 10px auto; }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */

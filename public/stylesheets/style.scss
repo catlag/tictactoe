@@ -1,0 +1,102 @@
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+
+body {
+  @include vendor-prefix(display,flex);
+  @include vendor-prefix(flex-direction, column);
+  @include vendor-prefix(align-content, center);
+
+  background-color: #FFBBB6; 
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+table{
+  margin: auto;
+  z-index: 200;
+  // font-family: 'Schoolbell', cursive;
+
+  
+}
+
+td {
+  // font-family: 'Schoolbell', cursive;
+  height: 2.5em;
+  width: 2.5em;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#b1, #b2, #b4, #b5, #b7, #b8 {
+  border-right: 3px dashed white;
+}
+#b1, #b2, #b3, #b4, #b5, #b6{
+  border-bottom: 3px dashed white;
+}
+
+h1{
+  // font-family: 'Amatic SC', cursive;
+  margin: 2% 0 auto;
+  font-size: 3em;
+  text-align: center;
+}
+
+#reset {
+  -webkit-appearance: none;
+  background: rgba(255, 187, 182, 1);;
+  display: none;
+  position: absolute;
+  width: 7em;
+  height: 2em;
+  padding: 0;
+  border-radius: 0;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  margin-top: -1em;
+  margin-left: -3.5em;
+  // margin: 0 auto ;
+  font-size: 2em;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Julius Sans One', sans-serif;
+  z-index: 500;
+
+}
+
+p {
+  // font-family: 'Schoolbell', cursive;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 5px 20px auto;
+}
+
+h2 {
+//   font-family: 'Schoolbell', cursive;
+  color: red;
+  text-align: center;
+  font-size: 30px;
+  margin: 10px auto;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
