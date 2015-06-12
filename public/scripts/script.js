@@ -143,7 +143,7 @@ checkO = function(){
     val2.innerHTML === "X" && val5.innerHTML === "X" && val8.innerHTML === "X"  ||
     val0.innerHTML === "X" && val4.innerHTML === "X" && val8.innerHTML === "X"  ||
     val2.innerHTML === "X" && val4.innerHTML === "X" && val6.innerHTML === "X" ){
-    document.getElementById("p1").innerHTML = "X wins! Start a new game!";
+    document.getElementById("p1").innerHTML = "X wins!";
     console.log("X wins");
     win = true;
     showButton();
@@ -156,12 +156,12 @@ checkO = function(){
     val2.innerHTML === "O" && val5.innerHTML === "O" && val8.innerHTML === "O"  ||
     val0.innerHTML === "O" && val4.innerHTML === "O" && val8.innerHTML === "O"  ||
     val2.innerHTML === "O" && val4.innerHTML === "O" && val6.innerHTML === "O" ) {
-      document.getElementById("p1").innerHTML = "O wins! Start a new game!";
+      document.getElementById("p1").innerHTML = "O wins!";
       win = true;
       showButton();
       console.log("O wins");
     } else if (xCounter === 5 && win === false){
-      document.getElementById("p1").innerHTML = "No Winner! Start a new game!";
+      document.getElementById("p1").innerHTML = "No Winner!";
       console.log("no win");
     }
 };

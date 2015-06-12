@@ -9,17 +9,18 @@ body {
   -moz-flex-direction: column;
   -o-flex-direction: column;
   flex-direction: column;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  -moz-align-content: center;
-  -o-align-content: center;
-  align-content: center;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
   background-color: #FFBBB6;
   color: rgba(255, 255, 255, 0.8);
   font-family: 'Julius Sans One', sans-serif; }
 
 table {
-  margin: auto;
+  margin: 0 auto;
+  margin-top: 2em;
   z-index: 200; }
 
 td {
@@ -37,13 +38,13 @@ td {
   border-bottom: 3px dashed white; }
 
 h1 {
-  margin: 2% 0 auto;
+  margin: .5em 0 auto;
   font-size: 3em;
   text-align: center; }
 
 #reset {
   -webkit-appearance: none;
-  background: #ffbbb6;
+  background: rgba(255, 187, 182, 0.8);
   display: none;
   position: absolute;
   width: 7em;

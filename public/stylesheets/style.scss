@@ -10,7 +10,7 @@
 body {
   @include vendor-prefix(display,flex);
   @include vendor-prefix(flex-direction, column);
-  @include vendor-prefix(align-content, center);
+  @include vendor-prefix(justify-content, space-between);
 
   background-color: #FFBBB6; 
   color: rgba(255, 255, 255, 0.8);
@@ -18,7 +18,8 @@ body {
 }
 
 table{
-  margin: auto;
+  margin: 0 auto;
+  margin-top: 2em;
   z-index: 200;
   // font-family: 'Schoolbell', cursive;
 
@@ -44,14 +45,14 @@ td {
 
 h1{
   // font-family: 'Amatic SC', cursive;
-  margin: 2% 0 auto;
+  margin: .5em 0 auto;
   font-size: 3em;
   text-align: center;
 }
 
 #reset {
   -webkit-appearance: none;
-  background: rgba(255, 187, 182, 1);;
+  background: rgba(255, 187, 182, .8);;
   display: none;
   position: absolute;
   width: 7em;
